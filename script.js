@@ -1,46 +1,51 @@
-// Assignment code here
-// Prompts for password criteria
-
-  var passwordLength = prompt("Length of Password (8 min. - 128 max.)");
-  var includeLowercase = confirm("Include Lowercase Characters?");
-  var includeUppercase = confirm("Include Uppercase Characters?");
-  var includeNumeric = confirm("Include Numbers?");
-  var includeSpecial = confirm("Include Special Characters?");
-
-
-  // constant variable set for each criteria
+// variables for password
   var lowerCase = "abcdefghijklmnopqrstuvwxyz";
   var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   var numericChar = "0123456789";
   var specialChar = "!@#$%^&*()_+[]{}|;:,.<>?";
 
-  // validate input statements
+function generatePassword() { 
+  var passwordLength = parseInt(prompt("Length of Password (8 min. - 128 max.)"));
+  while (isNaN(passwordLength) || passwordLength < 8 || passwordLength > 128) {
+    passwordLength = parseInt(prompt("Length of Password (8 min. - 128 max.)"));
+  }
+  var includeLowercase = confirm("Include Lowercase Characters?");
+  var includeUppercase = confirm("Include Uppercase Characters?");
+  var includeNumeric = confirm("Include Numbers?");
+  var includeSpecial = confirm("Include Special Characters?");
 
-
-
-  // // Combined outcomes based on selected criteria
+  // generate random characters based on selected password criteria
+ let generatePassword = "";
   let allChars = "";
-  if (lowerCase) allChars += lowerCase;
-  if (upperCase) allChars += upperCase;
-  if (numericChar) allChars += numericChar;
-  if (specialChar) allChars += specialChar;
-
+  if (includeLowercase) {
+    allChars += lowerCase; 
+    generatePassword += allChars [Math.floor(Math.random() * lowerCase.length)];
+  }
+  if (includeUppercase) {
+  allChars += upperCase; 
+  generatePassword += allChars [Math.floor(Math.random() * upperCase.length)];
+}
+  if (includeNumeric) {
+     allChars += numericChar;
+    generatePassword += allChars [Math.floor(Math.random() * numericChar.length)];
+  }
+  if (includeSpecial) {
+    allChars += specialChar;
+    generatePassword += allChars [Math.floor(Math.random() * specialChar.length)];
+  }
   console.log(allChars);
-
-// alerts for invalid inputs and for loop for randomIndex
-function generatePassword() {
+  
+  // if insufficient characters aren't selected 
   if (!includeUppercase && !includeLowercase && !includeNumeric && !includeSpecial) {
     alert("Please select at least one character type.");
     return;
   }
-  if (isNaN(length) || length < 8 || length > 128) {
-    alert("Please enter a valid password length between 8 and 128.");
-    return;
-  }
-  let password = "";
-  for (let i=0; i < length; i++) {
+  // for loop to generate password 
+  for (let i = generatePassword.length; i < passwordLength; i++) {
     var randomIndex = Math.floor(Math.random() * allChars.length);
-  }  
+    generatePassword += allChars [randomIndex];
+  }    
+  return generatePassword;
 }  
 
   // Get references to the #generate element
