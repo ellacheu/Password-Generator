@@ -1,8 +1,6 @@
 # Password-Generator
-
-
 ## Description 
-
+The motivation behind creating this webpage is the create a random password generator based off of a specific criteria that the user is able to select using JavaScript.  I built this project to use and practice the knowledge and skills that I've learned to create a webpage application that is able to perform a function given a specific criteria. I learned how to properly present variables and how to organize them into a function using logic and conditional statements.  This has furthered my knowledge and practice in JavaScript and has helped me become more familiar with the proper vocabulary to use and the thought process and execution when it comes to writing a code in JavaScript.
 
 ## Usage
 A visual as to how to page should appear:
@@ -10,7 +8,8 @@ A visual as to how to page should appear:
 
 ## Credits
 Referenced resources: 
-https://developer.mozilla.org/en-US/
+https://developer.mozilla.org/en-US/ 
+<br>
 https://www.w3schools.com/
 
 ## Code Source
