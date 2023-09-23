@@ -5,14 +5,18 @@
 
 
 ## Usage
-
+A visual as to how to page should appear:
+![webpageimage](assets/images/password-generator.png)
 
 ## Credits
-
+Referenced resources: 
+https://developer.mozilla.org/en-US/
+https://www.w3schools.com/
 
 ## Code Source
 https://github.com/ellacheu/Password-Generator
 <br>
+https://ellacheu.github.io/Password-Generator/
 
 
 ## License 
